@@ -8,7 +8,7 @@
 
 
 // Skriv koden for oppgave 1 her
-
+//Dette er en funksjon som sjekker partall eller oddetall
  function check (tall)
   {
     if (tall % 2 === 0) 
@@ -40,7 +40,7 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!" */
 
  
 function cool (text) {
-
+//Dette er en funksjon som gjør tekst til STORE BOKSTAVER
 
 return text.toUpperCase() + "!"; 
    
@@ -133,14 +133,16 @@ Eksempel 1: ["Rød", "Grønn", "Blå", "Gul"] skal returnere ["Grønn", "Blå"].
 Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ["To", "Tre", "Fire", "Fem"]. */
 
-
+//// Dette er en funksjon som fjerner første og siste element
 let arr = ["apple", "banana", "dragonfruit", "orange", "watermelon", "kiwi", "pear"];
 
 function fruits(arr) {
   let result = [];
 
+//Starter på indeks 1 og stopper før siste
   for (let i = 1; i < arr.length - 1; i++) {
-    result.push(arr[i]);
+    result.push(arr[i]); 
+    //Legger element i ny array
   }
 
   return result;
@@ -166,9 +168,10 @@ Eksempel 2: " Det er vanskelig å bruke metoder " skal returnere "Det er gøy å
 Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
-
+//Dette er en funksjon som erstatter ord og fjerner mellomrom
 function replaceWord (text) {
     return text.trim().replace("vanskelig","gøy"); 
+    //Fjerner mellomrom og erstatter ord
 }
 
 console.log(replaceWord("Javascript er vanskelig"));
@@ -214,19 +217,20 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 // Skriv koden for oppgave 6 her
 
 const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
-
+//Fjerner første element
 items.shift();
-
+//Erstatter Viskelær med Linjal
 items.splice(2,1, "Linjal");
-
+//Fjerner to elementer og legger til ett nytt
 items.splice(0,2,"Markeringspenn");
-
+//Lager en string med separator
     let result = items.join(" | ")
 
 console.log(result);
 
 //////
 let withE = items.filter(function(element) {
+    //Sjekker om element inneholder e
     return element.includes("e");
 });
 
